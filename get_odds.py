@@ -6,7 +6,7 @@ from players import get_player_id
 
 CACHE_FILE = "player_props_cache.json"
 
-API_KEY = "42acb7ef1e5572fe4823ef94488a5c37"
+API_KEY = ""
 SPORT = "basketball_nba"
 MARKETS = "player_points,player_assists,player_rebounds,player_threes"
 BOOKMAKERS = "draftkings"

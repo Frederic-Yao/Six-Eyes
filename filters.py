@@ -1,7 +1,13 @@
+import pandas as pd
+
 
 #filter a players games by conditions
 def filter_games(df, home=None, opponent=None, min_minutes=None, last_n=None):
     filtered = df.copy() #stat with full dataframe
+
+    filtered["GAME_DATE"] = pd.to_datetime(df["GAME_DATE"])
+    filtered = filtered.sort_values("GAME_DATE")
+
     if home is True:
         filtered = filtered[filtered["MATCHUP"].str.contains("vs")]
     elif home is False:
@@ -18,7 +24,7 @@ def filter_games(df, home=None, opponent=None, min_minutes=None, last_n=None):
             filtered = filtered[filtered["MIN_float"] >= min_minutes]
         else:
             filtered = filtered[filtered["MIN"] >= min_minutes]
-    
+            
     if last_n is not None:
         filtered = filtered.tail(last_n)
     

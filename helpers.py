@@ -1,4 +1,5 @@
 import pandas as pd
+from nba_api.stats.static import teams
 
 def get_team_stats(season="2026"):
     #URL for season team stats
@@ -26,3 +27,17 @@ def get_team_stats(season="2026"):
     return team_stats
 
 # print(get_team_stats(season="2026"))
+
+def get_team_id(abbreviation):
+    all_teams = teams.get_teams()
+    team = [t for t in all_teams if t['abbreviation'] == abbreviation.upper()]
+    if team:
+        return team[0]['id']
+    else:
+        raise ValueError(f"Team abbreviation '{abbreviation}' not found")
+
+def american_to_prob(odds):
+    if odds < 0:
+        return(-odds) / ((-odds) + 100)
+    else:
+        return 100 / (odds + 100)

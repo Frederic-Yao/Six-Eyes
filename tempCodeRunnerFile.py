@@ -1,6 +1,0 @@
-    print("Avg 15:", avg_15)
-    print("Avg 5:", avg_5)
-    print("Final projection:", adjusted_projection)
-    print("Std:", combined_std)
-    print("Line:", line)
-    print("P(over):", p_over)

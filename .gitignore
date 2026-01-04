@@ -1,0 +1,13 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Local packages / downloads
+nba_api-1.11.3/
+nba_api-master/
+
+# Cache files
+player_props_cache.json
+
+# Editor configs
+.vscode/

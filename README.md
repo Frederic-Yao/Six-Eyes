@@ -18,6 +18,8 @@ using historical performance, matchup context, and scheduling effects.
 - nba_api
 - requests
 - CSV-based data caching
+- NumPy
+- SciPy
 
 ## Example Workflow
 1. Fetch daily NBA player props

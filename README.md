@@ -40,3 +40,4 @@ A Python-based analytics pipeline that ingests NBA player and team game logs, ca
 
 ## Disclaimer
 This project is for educational and analytical purposes only.
+Note: Automated full-day prop evaluation may fail due to NBA stats API blocking repeated requests; current code demonstrates the evaluation pipeline and modular design.

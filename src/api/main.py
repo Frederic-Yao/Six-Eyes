@@ -2,12 +2,13 @@ from filters import filter_games
 from probabilities import get_b2b, is_b2b, evaluate_prop_advanced
 from get_odds import get_player_props
 from helpers import american_to_prob
+import os
 
 # GLOBAL CACHE
 b2b_cache = {}
 PLAYER_LOG_CACHE = {}
 
-API_KEY = "42acb7ef1e5572fe4823ef94488a5c37"
+API_KEY = os.getenv("ODDS_API_KEY")
 
 #calling the function
 props = get_player_props(API_KEY)

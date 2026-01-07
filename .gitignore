@@ -8,6 +8,11 @@ nba_api-master/
 
 # Cache files
 player_props_cache.json
+*.json
+
+#env
+.env
+*.env
 
 # Editor configs
 .vscode/
